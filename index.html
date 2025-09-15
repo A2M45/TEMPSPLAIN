@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>TEMPS PLAIN Officiel</title>
-  <meta name="description" content="TEMP/PLEIN — Instagram • TikTok • Telegram — Suivez-nous pour créations et exclus." />
+  <meta name="description" content="TEMPS PLAIN — Instagram • TikTok • Telegram — Suivez-nous pour créations et exclus." />
   <style>
     :root{
       --bg1:#0f172a;--bg2:#0b1220;--accent:#ff6b6b;--accent-2:#7c5cff;
@@ -41,7 +41,7 @@
       box-shadow:0 8px 20px rgba(0,0,0,0.4);
       border:4px solid rgba(255,255,255,0.06);
     }
-    .name{font-size:20px;font-weight:700}
+    .name{font-size:20px;font-weight:700;text-transform:uppercase}
     .subtitle{color:var(--muted);font-size:13px;margin-top:-2px}
     .links{margin-top:14px;display:flex;flex-direction:column;gap:12px}
     .btn{
@@ -52,26 +52,37 @@
       color:var(--text);transition:.18s;
       box-shadow:0 6px 18px rgba(2,6,23,0.35);
       font-weight:600;
+      justify-content:center;
     }
     .btn:hover{transform:translateY(-6px);box-shadow:0 18px 36px rgba(2,6,23,0.45)}
     .btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;border:none}
-    .btn svg{width:20px;height:20px}
+    .btn svg{width:20px;height:20px;fill:currentColor}
     .row{display:flex;gap:10px;justify-content:center;margin-top:12px;flex-wrap:wrap}
     .chip{padding:8px 12px;border-radius:999px;background:var(--glass);border:1px solid rgba(255,255,255,0.03);color:var(--muted);font-size:13px}
     .footer{margin-top:16px;color:var(--muted);font-size:13px}
+    .qrcode{
+      position: fixed;
+      bottom: 16px;
+      right: 16px;
+      width: 100px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
   </style>
 </head>
 <body>
   <main class="card">
     <header class="profile">
-      <img class="avatar" src="pp.png" alt="TEMP PLAIN">
+      <img class="avatar" src="pp.png" alt="TEMPS PLAIN">
       <h1 class="name">TEMPS PLAIN</h1>
       <p class="subtitle">musique - clip</p>
     </header>
 
     <section class="links">
       <a class="btn primary" href="https://instagram.com/TEMP_PLEIN" target="_blank">
-        <svg viewBox="0 0 24 24" fill="currentColor">
+        <svg viewBox="0 0 24 24">
           <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4Zm8 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Z"/>
         </svg>
         Instagram
@@ -87,7 +98,7 @@
       </a>
 
       <a class="btn" href="https://t.me/TEMP_PLEIN" target="_blank">
-        <svg viewBox="0 0 24 24" fill="currentColor">
+        <svg viewBox="0 0 24 24">
           <path d="M22 4.01c0-.54-.58-.88-1.05-.64l-20 10.5a.75.75 0 0 0 .1 1.39l4.97 1.52 2.06 6.19a.75.75 0 0 0 1.34.15l3.06-4.59 4.99 3.77a.75.75 0 0 0 1.2-.4L22 4.38V4Z"/>
         </svg>
         Telegram
@@ -103,6 +114,9 @@
       © <span id="year"></span> TEMPS PLAIN — Tous droits réservés
     </footer>
   </main>
+
+  <img class="qrcode" src="qr.png" alt="QR code vers la page">
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
